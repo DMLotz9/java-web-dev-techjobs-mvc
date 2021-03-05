@@ -32,7 +32,7 @@ public class SearchController {
         model.addAttribute("columns", ListController.columnChoices);
 
         ArrayList<Job> jobs;
-        if (searchType.equals("all") || searchTerm == "" || searchTerm.toLowerCase() == "all") {
+        if (searchTerm == "" || searchTerm.toLowerCase() == "all") {
             jobs = JobData.findAll();
             model.addAttribute("title", "All Jobs");
         } else {
